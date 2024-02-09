@@ -12,7 +12,33 @@ class TestEnv(QWidget):
     def __init__(self):
         super().__init__()
 
-    
+               # creating and configuring graphic elements:
+       self.initUI()
+
+       #establishes connections between elements
+       self.connects()
+
+       # sets what the window will look like (label, size, location)
+       self.set_appear()
+
+       # start:
+       self.show()
+
+    def next_click(self):
+       self.tw = TestWin()
+       self.hide()
+
+
+   def connects(self):
+       self.btn_next.clicked.connect(self.next_click)
+
+
+   ''' sets what the window will look like (label, size, location) '''
+   def set_appear(self):
+       self.setWindowTitle(txt_title)
+       self.resize(win_width, win_height)
+       self.move(win_x, win_y)
+       
     def initUI(self):
         # Buttons
         self.btn_sendresult = QPushButton(txt_sendresults, self)
@@ -67,6 +93,16 @@ class TestEnv(QWidget):
         self.h_line.addLayout(self.r_line)
 
         self.setLayout(self.h_line)
+
+    def next_click(self):
+       self.hide()
+       self.fw = FinalWin()
+
+
+   def connects(self):
+       self.btn_next.clicked.connect(self.next_click)
+
+
 
     def set_appear(self):
         self.setWindowTitle(txt_title)
