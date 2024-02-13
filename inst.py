@@ -1,7 +1,6 @@
 win_x, win_y = 200, 100
 win_width, win_height = 1000, 600
 
-
 txt_hello = 'Welcome to the Health status detection program!'
 txt_next = 'Start'
 txt_instruction = ('This application allows you to use the Rufier test to make an initial diagnosis of your health.\n'
@@ -12,6 +11,7 @@ txt_instruction = ('This application allows you to use the Rufier test to make a
                    'and then for the last 15 seconds of the first minute of the recovery period.\n'
                    'Important! If you feel unwell during the test (dizziness,\n'
                    'tinnitus, shortness of breath, etc.), stop the test and consult a physician.' )
+
 txt_title = 'Health'
 txt_name = 'Enter Your full name:'
 txt_hintname = "Full name"
@@ -28,6 +28,11 @@ txt_starttest2 = 'Start doing squats'
 txt_starttest3 = 'Start the final test'
 txt_timer = ''
 
+level1 = "Low"
+level2 = "Satisfactory"
+level3 = "Average"
+level4 = "Above Average"
+level5 = "High"
 
 txt_age = 'Age:'
 txt_finalwin = 'Results'
